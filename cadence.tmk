@@ -1,0 +1,29 @@
+module recipe
+
+recipe {
+  VENDOR      test
+  TOOL        test
+  VERSION     123
+  PKG_ITER    77
+  CATEGORY    eda
+  DESCRIPTION "testinging"
+  HOMEPAGE    http://www.arm.com/
+  LICENSE     ArmLicense
+}
+
+# An empty platform_map is needed to build pre-built tool
+# that is platform-independent
+
+platform_map {
+}
+set Thisbeforethat_Tools "/test/test001"
+
+step modulefile --set platform_check no --set verbatim {
+
+    append-path LD_LIBRARY_PATH $Version_Path/lib
+    append-path PATH   $Version_Path/bin
+    setenv AP_LOCATION $Version_Path
+}
+
+module manual-install
+
