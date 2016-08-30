@@ -3,8 +3,8 @@ module recipe
 recipe {
   VENDOR      test
   TOOL        test
-  VERSION     123
-  PKG_ITER    79
+  VERSION     1234_G1
+  PKG_ITER    01
   CATEGORY    eda
   DESCRIPTION "testinging"
   HOMEPAGE    http://www.arm.com/
